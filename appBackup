@@ -1,0 +1,303 @@
+import React, { Component } from 'react'
+import { StyleSheet, Text, View,Button,TextInput,ScrollView,FlatList,Image,Icon } from 'react-native';
+// import {} from 'expo'
+import {  SearchBar,List, ListItem} from 'react-native-elements';
+import img1 from '../assets/img1.jpg'
+import img2 from '../assets/img2.jpg'
+import img3 from '../assets/img3.png'
+import img4 from '../assets/img4.jpg'
+import img5 from '../assets/img5.jpg'
+import img6 from '../assets/img6.jpg'
+import img7 from '../assets/img7.jpg'
+import img8 from '../assets/img8.jpg'
+
+export default class Home extends Component {
+  constructor(){
+    super()
+    this.state={
+      list:[
+        {
+          name: 'Amy Farha',
+          avatar_url: '../assets/img1.jpg',
+          subtitle: 'Vice President'
+        },
+        {
+          name: 'Chris Jackson',
+          avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
+          subtitle: 'Vice Chairman'
+        },
+        {
+          name: 'Amy Farha',
+          avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+          subtitle: 'Vice President'
+        },
+        {
+          name: 'Chris Jackson',
+          avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
+          subtitle: 'Vice Chairman'
+        },{
+          name: 'Amy Farha',
+          avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+          subtitle: 'Vice President'
+        },
+        {
+          name: 'Chris Jackson',
+          avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
+          subtitle: 'Vice Chairman'
+        },{
+          name: 'Amy Farha',
+          avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+          subtitle: 'Vice President'
+        },
+        {
+          name: 'Chris Jackson',
+          avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
+          subtitle: 'Vice Chairman'
+        },{
+          name: 'Amy Farha',
+          avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+          subtitle: 'Vice President'
+        },
+        {
+          name: 'Chris Jackson',
+          avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
+          subtitle: 'Vice Chairman'
+        },{
+          name: 'Amy Farha',
+          avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+          subtitle: 'Vice President'
+        },
+        {
+          name: 'Chris Jackson',
+          avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
+          subtitle: 'Vice Chairman'
+        },{
+          name: 'Amy Farha',
+          avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+          subtitle: 'Vice President'
+        },
+        {
+          name: 'Chris Jackson',
+          avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
+          subtitle: 'Vice Chairman'
+        },{
+          name: 'Amy Farha',
+          avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+          subtitle: 'Vice President'
+        },
+        {
+          name: 'Chris Jackson',
+          avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
+          subtitle: 'Vice Chairman'
+        },{
+          name: 'Amy Farha',
+          avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+          subtitle: 'Vice President'
+        },
+        {
+          name: 'Chris Jackson',
+          avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
+          subtitle: 'Vice Chairman'
+        },{
+          name: 'Amy Farha',
+          avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+          subtitle: 'Vice President'
+        },
+        {
+          name: 'Chris Jackson',
+          avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
+          subtitle: 'Vice Chairman'
+        },{
+          name: 'Amy Farha',
+          avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+          subtitle: 'Vice President'
+        },
+        {
+          name: 'Chris Jackson',
+          avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
+          subtitle: 'Vice Chairman'
+        },
+     
+      ]
+    }
+  }
+    
+
+
+
+    // renderRow ({ item }) {
+    //     return (
+    //       <ListItem
+    //         roundAvatar
+    //         title={item.name}
+    //         subtitle={item.subtitle}
+    //         avatar={{uri:item.avatar_url}}
+    //       />
+    //     )
+    //   }
+    render() {
+
+
+        
+        
+
+          
+        return (
+            <View>
+           
+     {/* <SearchBar
+                placeholder="Type Here..."
+                lightTheme='true'
+                round='true'
+                
+         /> */}
+ <SearchBar
+  lightTheme
+ round={true}
+  icon={{ type: 'font-awesome', name: 'search' }}
+  placeholder='Type Here...' /> 
+
+{/* <View style={styles.searchSection}> */}
+    {/* <Icon style={styles.searchIcon} name="ios-search" size={20} color="#000"/> */}
+    {/* <TextInput
+        style={styles.input}
+        placeholder="User Nickname"
+        onChangeText={(searchString) => {this.setState({searchString})}}
+        underlineColorAndroid="transparent"
+    /> */}
+{/* </View> */}
+
+  <ScrollView
+  // style={{marginTop:10,}}
+        horizontal={true}
+        style={styles.contentContainer}
+        showsHorizontalScrollIndicator={false}
+        showsVerticalScrollIndicator={false}
+        >
+           <Image 
+           source={require('../assets/img1.jpg')}
+           style={styles.imgs}
+           />
+            <Image 
+           source={require('../assets/img1.jpg')}
+           style={styles.imgs}
+           />
+            <Image 
+           source={require('../assets/img1.jpg')}
+           style={styles.imgs}
+           />
+            <Image 
+           source={require('../assets/img1.jpg')}
+           style={styles.imgs}
+           />
+            <Image 
+           source={require('../assets/img1.jpg')}
+           style={styles.imgs}
+           />
+            <Image 
+           source={require('../assets/img1.jpg')}
+           style={styles.imgs}
+           />
+             <Image 
+           source={require('../assets/img1.jpg')}
+           style={styles.imgs}
+
+           /> 
+            <Image 
+           source={require('../assets/img1.jpg')}
+           style={styles.imgs}
+
+           />
+             <Image 
+           source={require('../assets/img1.jpg')}
+           style={styles.imgs}
+
+           />
+             <Image 
+           source={require('../assets/img1.jpg')}
+           style={styles.imgs}
+
+           />
+             <Image 
+           source={require('../assets/img1.jpg')}
+           style={styles.imgs}
+
+           />
+             <Image 
+           source={require('../assets/img1.jpg')}
+           style={styles.imgs}
+
+           />
+
+
+    </ScrollView>
+
+<View style={{height:10,width:10,flex:1}}>
+
+</View>
+   
+
+  
+     {/* <List> */}
+      <FlatList
+        data={this.state.list}
+        renderItem={({ item })=> {
+              return (
+                <ListItem
+                  roundAvatar
+                  title={item.name}
+                  subtitle={item.subtitle}
+                  avatar={{uri:item.avatar_url}}
+                />
+              )
+            }
+        }
+        keyExtractor={item => item.name}
+      />
+   {/* </List> */}
+   
+
+
+
+            </View>     
+   )
+    }
+}
+
+const styles = StyleSheet.create({
+    container: {
+    
+    },
+    imgDiv:{
+
+    },
+    imgs:{
+      height:55,
+      width:55,
+      borderRadius:100,
+      borderWidth:2,
+      borderColor:'blue',
+      margin:5,
+
+    },
+    searchSection: {
+      flex: 1,
+      flexDirection: 'row',
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundColor: '#fff',
+      marginTop:50,
+  },
+  searchIcon: {
+      padding: 10,
+  },
+  input: {
+      flex: 1,
+      paddingTop: 10,
+      paddingRight: 10,
+      paddingBottom: 10,
+      paddingLeft: 0,
+      backgroundColor: '#fff',
+      color: '#424242',
+  },
+  });
